@@ -3,110 +3,139 @@
 
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Кет Энерджи</title>
+    <title>HTML Academy: Кэт Энерджи</title>
     <link rel="icon" href="../favicon.ico">
     <link rel="icon" href="img/152.svg" type="image/svg+xml">
   </head>
 
-  <body class="page__body">
+  <body class="page-body">
 
     <header class="page-header">
-      <a class="page-header__logo" href="#">
-        <img src="img/logo-mobile.svg" width="196" height="38" alt="Логотип Cat energy">
+      <a class="page-header__link" href="index.html" title="На главную">
+        <img src="img/logo-mobile.svg" alt="Логотип Кэт Энерджи">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--active">
-            <a>главная</a>
+            <a href="index.html">главная</a>
           </li>
           <li class="main-nav__item">
             <a href="catalog.html">каталог продукции</a>
           </li>
           <li class="main-nav__item">
-            <a href="form.html">подбор программы</a>
+            <a href="#">подбор программы</a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <main class="page-main">
+    <main>
+      <h1 class="main-title">Подбор программы</h1>
 
-      <h1 class="main-title">Функциональное питание для котов</h1>
+      <form action="https://echo.htmlacademy.ru">
 
-      <section class="choose-program">
-        <h2 class="visually-hidden">Выбор программы питания</h2>
-        <p class="selection-program__slogan">Занялся собой? Займись котом!</p>
-        <a class="selection-program__link" href="form.html">подобрать программу</a>
-        <dl class="selection-program__list">
-          <div class="selection-program__item">
-            <dt class="selection-program__term">похудение</dt>
-            <dd class="selection-program__definiton">Ваш кот весит больше собаки и почти утратил способность лазить по
-              деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
-              <a class="selection-program__list-link" href="#">каталог slim</a>
-            </dd>
-          </div>
-          <div class="selection-program__item">
-            <dt class="selection-program__term">Набор массы</dt>
-            <dd class="selection-program__definiton">Заработать авторитет среди дворовых котов и даже собак? Серия Cat
-              Energy Pro поможет вашему коту нарастить необходимые мышцы!
-              <a href="#" class="selection-program__list-link">каталог pro</a>
-            </dd>
-          </div>
-        </dl>
-      </section>
+        <div class="program-selection">
 
-      <section class="advantages">
-        <h2 class="advantages__title section-title">Как это работает</h2>
-        <ul class="advantages__list">
-          <li class="advantages__item advantages__item--functional-food">Функциональное питание содержит только полезные
-            питательные
-            вещества.</li>
-          <li class="advantages__item advantages__item--release">Выпускается в виде порошка, который нужно лишь залить
-            кипятком и готово.
-          </li>
-          <li class="advantages__item advantages__item--change">Замените один-два приема обычной еды на наше
-            функциональное питание.</li>
-          <li class="advantages__item advantages__item--time">Уже через месяц наслаждайтесь изменениями к лучшему вашего
-            питомца!</li>
-        </ul>
-      </section>
+          <section class="program-selection__pet pet">
+            <h2 class="visually-hidden">Параметры питомца</h2>
+            <p class="pet__text">Заполните анкету, и мы подберем
+              программу питания для вашего кота</p>
+            <ul class="pet__data-list">
+              <li class="pet__data-item">
+                <label class="pet__data-label" for="pet-name">ИМЯ:*</label>
+                <input class="pet__data-input" id="pet-name" type="text" name="pet-name-input" placeholder="барсик"
+                  required>
+              </li>
+              <li class="pet__data-item">
+                <label class="pet__data-label" for="pet-weight">Вес (кг):*</label>
+                <input class="pet__data-input" id="pet-weight" type="number" name="pet-weight-input" placeholder="7"
+                  required>
+              </li>
+              <li class="pet__data-item">
+                <label class="pet__data-label" for="pet-age">Возраст (лет):</label>
+                <input class="pet__data-input" id="pet-age" type="number" name="pet-age-input" placeholder="7">
+              </li>
+            </ul>
 
-      <section class="live-example">
-        <h2 class="live-example__title section-title">Живой пример</h2>
-        <p class="live-example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
-          Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по
-          16 часов в день.</p>
-        <div class="live-example__block">5 КГ<small>снижение веса</small></div>
-        <div class="live-example__block">60 ДНЕЙ<small>затрачено времени</small></div>
-        <p class="live-example__cost">Затраты на питание: <span>15 000 РУБ.</span> </p>
+            <ul class="pet__services-list">
+              <li class="pet__services-item">
+                <input class="pet__services-input" id="filter-slimming" type="radio" name="choice-services"
+                  value="slimming" checked>
+                <label class="pet__services-label" for="filter-slimming">похудение</label>
+              </li>
+              <li class="pet__services-item">
+                <input class="pet__services-input" id="filter-fattening" type="radio" name="choice-services"
+                  value="fattening">
+                <label class="pet__services-label" for="filter-fattening">Набор массы</label>
+              </li>
+              <li class="pet__services-item">
+                <input class="pet__services-input" id="filter-your-advice" type="radio" name="choice-services"
+                  value="your-advice">
+                <label class="pet__services-label" for="filter-your-advice">Не знаю (Нужен ваш совет)</label>
+              </li>
+            </ul>
+          </section>
 
-        <div class="live-example__slider">
-          <ul class="live-example__list">
-            <li class="live-example__item">
-              <img src="img/before-mobile.png" alt="Кот до приёма Cat Energy">
-            </li>
-            <li class="live-example__item">
-              <img src="img/after-mobile.png" alt="Кот после приёма Cat Energy">
-            </li>
-          </ul>
+          <section class="program-selection__owner-details owner-details">
+            <h2 class="owner-details__title">Контактные данные
+              (владельца кота)</h2>
+            <ul class="owner-details__list">
+              <li class="owner-details__item">
+                <label class="owner-details__label" for="email-input">E-mail:*</label>
+                <input class="owner-details__input" id="email-input" type="email" name="email-input"
+                  placeholder="kuklachev@gmail.com">
+              </li>
+              <li class="owner-details__item">
+                <label class="owner-details__label" for="phone-input">Телефон:*</label>
+                <input class="owner-details__input" id="phone-input" type="tel" name="phone-namber-input"
+                  placeholder="8 (960) 900-60-90">
+              </li>
+            </ul>
+          </section>
+
+          <section class="program-selection__comment сomment">
+            <h2 class="comment__title">Комментарий</h2>
+            <textarea class="comment__text" id="comment" name="comment" cols="30" rows="10"
+              placeholder="Расскажите обо всех повАдках кота"></textarea>
+          </section>
+
+          <section class="program-selection__additionally additionally">
+            <h2 class="additionally__title"></h2>
+            <ul class="additionally__list">
+              <li class="additionally__item">
+                <input class="additionally__input" id="checkbox-sweetener" type="checkbox" name="checkbox-sweetener"
+                  checked>
+                <label class="additionally__label" for="checkbox-sweetener">сахарозаменитель</label>
+              </li>
+              <li class="additionally__item">
+                <input class="additionally__input" id="checkbox-water" type="checkbox" name="checkbox-water">
+                <label class="additionally__label" for="checkbox-water">питьевая вода</label>
+              </li>
+              <li class="additionally__item">
+                <input class="additionally__input" id="checkbox-milk" type="checkbox" name="checkbox-milk">
+                <label class="additionally__label" for="checkbox-milk">молоко</label>
+              </li>
+              <li class="additionally__item">
+                <input class="additionally__input" id="checkbox-vitamins" type="checkbox" name="checkbox-vitamins">
+                <label class="additionally__label" for="checkbox-vitamins">витамины</label>
+              </li>
+            </ul>
+          </section>
+
+          <section class="competition__submit-block submit-block">
+            <button class="submit-block__button" type="submit">
+              Отправить форму
+            </button>
+
+            <p class="submit-block__text">
+              <span class="submit-block__asterix"> *</span>
+              <span class="submit-block__text-text">&mdash; обязательные поля</span>
+            </p>
+          </section>
+
         </div>
-
-        <div class="live-example__range">
-          <div class="live-example__range-control">
-            <div class="live-example__scale">
-              <div class="live-example__bar" style="
-                width: 50%;
-                margin-left: 0%;">
-              </div>
-            </div>
-            <a class="live-example__toggle" href="#" aria-label="Настройка изображения" tabindex="0" style="
-            margin-left: 8%;"></a>
-
-          </div>
-        </div>
-      </section>
-
+      </form>
     </main>
 
     <footer class="main-footer">
@@ -125,7 +154,8 @@
         </div>
       </section>
 
-      <a href="index.html" class="footer__logo"><img src="img/footer-logo2.svg" alt="Текстовый логотип Кэт Энерджи"></a>
+      <a href="index.html" class="footer__logo" title="На главную"><img src="img/footer-logo2.svg"
+          alt="Текстовый логотип Кэт Энерджи"></a>
 
       <div class="footer__social">
         <ul class="footer__list">
@@ -169,6 +199,7 @@
         </a>
       </p>
     </footer>
+
   </body>
 
 </html>
